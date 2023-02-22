@@ -1,9 +1,3 @@
-# To-dos
-# 1. Refactor to pass values from lookups.py thru the code
-# 2. Create place to spit out pick data
-
-# *************************
-
 
 import numpy as np
 import pandas as pd
@@ -201,19 +195,6 @@ with st.expander("Choose Your Super Bowl Champion"):
 
             submitButton = st.form_submit_button(label = 'Submit Super Bowl Winner')
 
-
-
-# Function for after WC Week
-# Function for after Div Week
-# Function for after Conf Week
-# Function for after Pro Bowl
-# Function for end
-# Date picker to choose function
-# Simulator based on elo
-
-#Something with helmets?
-
-#************************************************************************
 
 
 
