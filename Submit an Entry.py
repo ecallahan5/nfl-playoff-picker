@@ -270,10 +270,12 @@ with st.expander("Check Your Picks and Send Them!"):
 
         with col_submit:
             st.subheader("Super Bowl Pick")
-            for pick in picks_row[14:15]:
-                st.image(df_teams.loc[df_teams["name"] == pick[3:]]["helmet"].values[0])
+            buffer14, helmet, buffer15= st.columns(3)
+            with helmet:
+                for pick in picks_row[14:15]:
+                    st.image(df_teams.loc[df_teams["name"] == pick[3:]]["helmet"].values[0])
 
-            pick_submitButton = st.button(label = 'Submit Your Picks!', type = "primary")
+            pick_submitButton = st.button(label = 'Submit Your Picks!', type = "primary", use_container_width=True)
 
             # Load the Google Sheets credentials
             scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -290,9 +292,6 @@ with st.expander("Check Your Picks and Send Them!"):
                 sheet = client.open_by_url(sheet_url).sheet1
                 transposed_row = [submission]
                 sheet.append_rows(transposed_row)
-                # for row in submission:
-                #     row_without_comma = row.replace(",", "") 
-                #     sheet.append_row([row_without_comma])
 
             if pick_submitButton:
                 write_to_google_sheet(picks_row)
