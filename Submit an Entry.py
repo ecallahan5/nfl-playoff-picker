@@ -238,7 +238,7 @@ with st.expander("Choose Your Super Bowl Champion"):
         st.write("Choose your Conference Champions First!")
 
 st.subheader('6. Submit Your Bracket!', divider = True)
-with st.expander(""):
+with st.expander("Check Your Picks and Send Them!"):
     col_picks, col_submit= st.columns(2)
     
     try:
