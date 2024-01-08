@@ -298,7 +298,7 @@ with st.expander(""):
                 write_to_google_sheet(picks_row)
                 st.success("Picks submitted successfully!")
 
-        except:
+    except:
         st.write("Finish your Picks First!") 
 
 # Function for after WC Week
