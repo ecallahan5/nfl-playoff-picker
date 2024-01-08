@@ -275,31 +275,31 @@ with st.expander(""):
 
             pick_submitButton = st.button(label = 'Submit Your Picks!', type = "primary")
 
-    except:
+            # Load the Google Sheets credentials
+            scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+            creds = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(config.google_credentials, strict=False), scope)
+
+            # Initialize the Google Sheets client
+            client = gspread.authorize(creds)
+
+            # Define the Google Sheet destination URL 
+            sheet_url = config.google_sheet_url
+
+            # Write the form submission to the Google Sheet
+            def write_to_google_sheet(submission):
+                sheet = client.open_by_url(sheet_url).sheet1
+                transposed_row = [submission]
+                sheet.append_rows(transposed_row)
+                # for row in submission:
+                #     row_without_comma = row.replace(",", "") 
+                #     sheet.append_row([row_without_comma])
+
+            if pick_submitButton:
+                write_to_google_sheet(picks_row)
+                st.success("Picks submitted successfully!")
+
+        except:
         st.write("Finish your Picks First!") 
-
-        # Load the Google Sheets credentials
-        scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-        creds = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(config.google_credentials, strict=False), scope)
-
-        # Initialize the Google Sheets client
-        client = gspread.authorize(creds)
-
-        # Define the Google Sheet destination URL 
-        sheet_url = config.google_sheet_url
-
-        # Write the form submission to the Google Sheet
-        def write_to_google_sheet(submission):
-            sheet = client.open_by_url(sheet_url).sheet1
-            transposed_row = [submission]
-            sheet.append_rows(transposed_row)
-            # for row in submission:
-            #     row_without_comma = row.replace(",", "") 
-            #     sheet.append_row([row_without_comma])
-
-        if pick_submitButton:
-            write_to_google_sheet(picks_row)
-            st.success("Picks submitted successfully!")
 
 # Function for after WC Week
 # Function for after Div Week
