@@ -48,4 +48,3 @@ team_list = [
 {"slug": 'LAR', "name": "Los Angeles Rams", "conf": "NFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/5941/full/3521_los_angeles_rams-helmet-2020.png"}
 ]
 
-picks_df = pd.read_csv("picks.csv", index_col = False)
