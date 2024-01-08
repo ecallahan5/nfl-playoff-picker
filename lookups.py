@@ -7,10 +7,10 @@ pro_bowl_logo = "https://static.www.nfl.com/image/private/t_q-best/league/rxd0qr
 super_bowl_logo = 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Super_Bowl_LVIII_logo.svg/640px-Super_Bowl_LVIII_logo.svg.png'
 
 team_list = [
-{"slug": 'BUF', "name": "Buffalo Bills", "conf": "AFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/149/full/buffalo_bills_logo_helmet_2021_sportslogosnet-4815.png"},
+{"slug": 'BUF', "name": "Buffalo Bills", "conf": "AFC", "seed" : "2", "helmet": "https://content.sportslogos.net/logos/7/149/full/buffalo_bills_logo_helmet_2021_sportslogosnet-4815.png"},
 {"slug": 'NE', "name": "New England Patriots", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/151/full/ki7ghgfrfy7ufmkza3fetxz64.png"},
 {"slug": 'NYJ', "name": "New York Jets", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/152/full/8989_new_york_jets-helmet-2019.png"},
-{"slug": 'MIA', "name": "Miami Dolphins", "conf": "AFC", "seed" : "2", "helmet": "https://content.sportslogos.net/logos/7/150/full/5586_miami_dolphins-helmet-2018.png"},
+{"slug": 'MIA', "name": "Miami Dolphins", "conf": "AFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/150/full/5586_miami_dolphins-helmet-2018.png"},
 
 {"slug": 'CIN', "name": "Cincinnati Bengals", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/154/full/ftn3942al0p6xnzh9lv9v11hl.png"},
 {"slug": 'BAL', "name": "Baltimore Ravens", "conf": "AFC", "seed" : "1", "helmet": "https://content.sportslogos.net/logos/7/153/full/317.png"},
