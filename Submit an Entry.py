@@ -240,38 +240,43 @@ with st.expander("Choose Your Super Bowl Champion"):
 st.subheader('6. Submit Your Bracket!', divider = True)
 with st.expander(""):
     col_picks, col_submit= st.columns(2)
-    with col_picks:
+    
+    try:
+        with col_picks:
 
-        picks_row = [name, afc_wc1_select, afc_wc2_select, afc_wc3_select, nfc_wc1_select, nfc_wc2_select, nfc_wc3_select, \
-            afc_div1_select, afc_div2_select, nfc_div1_select, nfc_div2_select, nfc_champ_select, afc_champ_select, \
-            pro_bowl_select, super_bowl_select ]
+            picks_row = [name, afc_wc1_select, afc_wc2_select, afc_wc3_select, nfc_wc1_select, nfc_wc2_select, nfc_wc3_select, \
+                afc_div1_select, afc_div2_select, nfc_div1_select, nfc_div2_select, nfc_champ_select, afc_champ_select, \
+                pro_bowl_select, super_bowl_select ]
+            
+            st.subheader("AFC Wild Card Picks")
+            for pick in picks_row[1:4]:
+                st.write(pick)
+            st.subheader("NFC Wild Card Picks")
+            for pick in picks_row[4:7]:
+                st.write(pick)
+            st.subheader("AFC Divisional Round Picks")
+            for pick in picks_row[7:9]:
+                st.write(pick)
+            st.subheader("NFC Divisional Round Picks")
+            for pick in picks_row[9:11]:
+                st.write(pick)
+            st.subheader("Conference Champion Picks")
+            for pick in picks_row[11:13]:
+                st.write(pick)
+            st.subheader("Pro Bowl Pick")
+            for pick in picks_row[13:14]:
+                st.write(pick)
         
-        st.subheader("AFC Wild Card Picks")
-        for pick in picks_row[1:4]:
-            st.write(pick)
-        st.subheader("NFC Wild Card Picks")
-        for pick in picks_row[4:7]:
-            st.write(pick)
-        st.subheader("AFC Divisional Round Picks")
-        for pick in picks_row[7:9]:
-            st.write(pick)
-        st.subheader("NFC Divisional Round Picks")
-        for pick in picks_row[9:11]:
-            st.write(pick)
-        st.subheader("Conference Champion Picks")
-        for pick in picks_row[11:13]:
-            st.write(pick)
-        st.subheader("Pro Bowl Pick")
-        for pick in picks_row[13:14]:
-            st.write(pick)
-        
 
-    with col_submit:
-        st.subheader("Super Bowl Pick")
-        for pick in picks_row[14:15]:
-            st.image(df_teams.loc[df_teams["name"] == pick[3:]]["helmet"].values[0])
+        with col_submit:
+            st.subheader("Super Bowl Pick")
+            for pick in picks_row[14:15]:
+                st.image(df_teams.loc[df_teams["name"] == pick[3:]]["helmet"].values[0])
 
-        pick_submitButton = st.button(label = 'Submit Your Picks!', type = "primary")
+            pick_submitButton = st.button(label = 'Submit Your Picks!', type = "primary")
+
+    except:
+        st.write("Finish your Picks First!") 
 
         # Load the Google Sheets credentials
         scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
