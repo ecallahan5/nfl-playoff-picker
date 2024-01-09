@@ -12,7 +12,6 @@ import lookups
 import json
 import config
 from google.oauth2 import service_account
-# from gsheetsdb import connect
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
