@@ -1,9 +1,3 @@
-# To-dos
-# 1. Refactor to pass values from lookups.py thru the code
-# 2. Create place to spit out pick data
-
-# *************************
-
 
 import numpy as np
 import pandas as pd
@@ -299,17 +293,8 @@ with st.expander("Check Your Picks and Send Them!"):
     except:
         st.write("Finish your Picks First!") 
 
-# Function for after WC Week
-# Function for after Div Week
-# Function for after Conf Week
-# Function for after Pro Bowl
-# Function for end
-# Date picker to choose function
-# Simulator based on elo
 
-#Something with helmets?
 
-#************************************************************************
 
 
 
