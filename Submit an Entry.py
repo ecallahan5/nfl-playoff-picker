@@ -295,8 +295,3 @@ with st.expander("Check Your Picks and Send Them!"):
 
 
 
-
-
-
-
-
