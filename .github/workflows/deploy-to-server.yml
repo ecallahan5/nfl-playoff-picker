@@ -22,4 +22,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: sudo supervisorctl restart streamlit && streamlit cache clear
+          script: sudo supervisorctl restart picker && streamlit cache clear
