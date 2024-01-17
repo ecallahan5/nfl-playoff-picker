@@ -66,25 +66,25 @@ with hlmt_a1:
     try:
         st.image(df_teams.loc[df_teams['name'] == afc1_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose AFC Divisional 1")
+        st.caption("Choose AFC Divisional 1")
 
 with hlmt_a2:
     try:
         st.image(df_teams.loc[df_teams['name'] == afc2_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose AFC Divisional 2")
+        st.caption("Choose AFC Divisional 2")
 
 with hlmt_n1:
     try:
         st.image(df_teams.loc[df_teams['name'] == nfc1_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose NFC Divisional 1")
+        st.caption("Choose NFC Divisional 1")
 
 with hlmt_n2:
     try:
         st.image(df_teams.loc[df_teams['name'] == nfc2_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose NFC Divisional 2")
+        st.caption("Choose NFC Divisional 2")
 
 with pick_a:
 
@@ -124,7 +124,7 @@ with img_afc_champ:
     try:
         st.image(df_teams.loc[df_teams['name'] == afc_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose AFC Champion")
+        st.caption("Choose AFC Champion")
 
 with sb_pick:
     sb_select = st.selectbox(
@@ -135,7 +135,7 @@ with img_nfc_champ:
     try:
         st.image(df_teams.loc[df_teams['name'] == nfc_select[3:]]["helmet"].values[0])
     except:
-        st.write("Choose NFC Champion" )
+        st.caption("Choose NFC Champion" )
 
 st.divider()
 st.subheader("Simulated Standings", divider=True)
