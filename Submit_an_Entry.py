@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 df_teams = pd.DataFrame(lookups.team_list)
 # Input Data Model
