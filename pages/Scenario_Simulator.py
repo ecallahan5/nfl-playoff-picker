@@ -23,40 +23,48 @@ with img_a:
 with img_n:
     st.image(lookups.nfc_logo)
 
-st.subheader("Divisional Round", divider=True)
-picks_a1, picks_a2, picks_n1, picks_n2 = st.columns(4)
+# st.subheader("Divisional Round", divider=True)
+# picks_a1, picks_a2, picks_n1, picks_n2 = st.columns(4)
 
-with picks_a1:
+# with picks_a1:
 
-    afc1_select = st.selectbox(
-        "AFC Divisional 1",
-        (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["name"].values[0]), 
-         str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc2]["name"].values[0])),
-         index= None, placeholder="Who Wins?")
+#     afc1_select = st.selectbox(
+#         "AFC Divisional 1",
+#         (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["name"].values[0]), 
+#          str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc2]["name"].values[0])),
+#          index= None, placeholder="Who Wins?")
 
-with picks_a2:
+afc1_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["name"].values[0])
 
-    afc2_select = st.selectbox(
-        "AFC Divisional 2",
-        (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc4]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc4]["name"].values[0]), 
-         str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["name"].values[0])),
-         index= None, placeholder="Who Wins?")
+# with picks_a2:
 
-with picks_n1:
+#     afc2_select = st.selectbox(
+#         "AFC Divisional 2",
+#         (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc4]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc4]["name"].values[0]), 
+#          str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["name"].values[0])),
+#          index= None, placeholder="Who Wins?")
 
-    nfc1_select = st.selectbox(
-        "NFC Divisional 1",
-        (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc4]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc4]["name"].values[0]), 
-         str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["name"].values[0])),
-         index= None, placeholder="Who Wins?")
+afc2_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc1]["name"].values[0])
 
-with picks_n2:
+# with picks_n1:
 
-    nfc2_select = st.selectbox(
-        "NFC Divisional 2",
-        (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc7]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc7]["name"].values[0]), 
-         str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])),
-         index= None, placeholder="Who Wins?")
+#     nfc1_select = st.selectbox(
+#         "NFC Divisional 1",
+#         (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc4]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc4]["name"].values[0]), 
+#          str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["name"].values[0])),
+#          index= None, placeholder="Who Wins?")
+
+nfc1_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["name"].values[0])
+
+# with picks_n2:
+
+#     nfc2_select = st.selectbox(
+#         "NFC Divisional 2",
+#         (str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc7]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc7]["name"].values[0]), 
+#          str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])),
+#          index= None, placeholder="Who Wins?")
+
+nfc2_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])
 
 st.divider()
 st.subheader("Conference Championship Round", divider=True)

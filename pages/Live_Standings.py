@@ -14,7 +14,6 @@ conf_winners = ["", ""]
 pro_winner = [""]
 sb_winner = [""]
 
-# div_winners = ["PHI", "SF", "KC", "CIN"]
 # conf_winners = ["PHI", "KC"]
 # pro_winner = ["NFC"]
 # sb_winner = ["KC"]
