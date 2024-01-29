@@ -13,15 +13,15 @@ st.caption('Choose different outcomes for the remaining playoff games to see who
 sim_df = ls.standings_df.copy()
 df_teams = pd.DataFrame(lookups.team_list)
 
-st.divider()
-buffer1, img_a, buffer2, buffer3, img_n, buffer4 = st.columns(6)
+# st.divider()
+# buffer1, img_a, buffer2, buffer3, img_n, buffer4 = st.columns(6)
 
 
-with img_a:
-    st.image(lookups.afc_logo)
+# with img_a:
+#     st.image(lookups.afc_logo)
 
-with img_n:
-    st.image(lookups.nfc_logo)
+# with img_n:
+#     st.image(lookups.nfc_logo)
 
 # st.subheader("Divisional Round", divider=True)
 # picks_a1, picks_a2, picks_n1, picks_n2 = st.columns(4)
@@ -66,47 +66,52 @@ nfc1_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc3]["seed"]
 
 nfc2_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])
 
-st.divider()
-st.subheader("Conference Championship Round", divider=True)
-hlmt_a1, pick_a, hlmt_a2, hlmt_n1, pick_n, hlmt_n2 = st.columns(6)
+# st.divider()
+# st.subheader("Conference Championship Round", divider=True)
+# hlmt_a1, pick_a, hlmt_a2, hlmt_n1, pick_n, hlmt_n2 = st.columns(6)
 
-with hlmt_a1:
-    try:
-        st.image(df_teams.loc[df_teams['name'] == afc1_select[3:]]["helmet"].values[0])
-    except:
-        st.caption("Choose AFC Divisional 1")
+# with hlmt_a1:
+#     try:
+#         st.image(df_teams.loc[df_teams['name'] == afc1_select[3:]]["helmet"].values[0])
+#     except:
+#         st.caption("Choose AFC Divisional 1")
 
-with hlmt_a2:
-    try:
-        st.image(df_teams.loc[df_teams['name'] == afc2_select[3:]]["helmet"].values[0])
-    except:
-        st.caption("Choose AFC Divisional 2")
+# with hlmt_a2:
+#     try:
+#         st.image(df_teams.loc[df_teams['name'] == afc2_select[3:]]["helmet"].values[0])
+#     except:
+#         st.caption("Choose AFC Divisional 2")
 
-with hlmt_n1:
-    try:
-        st.image(df_teams.loc[df_teams['name'] == nfc1_select[3:]]["helmet"].values[0])
-    except:
-        st.caption("Choose NFC Divisional 1")
+# with hlmt_n1:
+#     try:
+#         st.image(df_teams.loc[df_teams['name'] == nfc1_select[3:]]["helmet"].values[0])
+#     except:
+#         st.caption("Choose NFC Divisional 1")
 
-with hlmt_n2:
-    try:
-        st.image(df_teams.loc[df_teams['name'] == nfc2_select[3:]]["helmet"].values[0])
-    except:
-        st.caption("Choose NFC Divisional 2")
+# with hlmt_n2:
+#     try:
+#         st.image(df_teams.loc[df_teams['name'] == nfc2_select[3:]]["helmet"].values[0])
+#     except:
+#         st.caption("Choose NFC Divisional 2")
 
-with pick_a:
+# with pick_a:
 
-    afc_select = st.selectbox(
-        "AFC Championship",
-        (afc1_select, afc2_select), index= None, placeholder="Who Wins?")
+#     afc_select = st.selectbox(
+#         "AFC Championship",
+#         (afc1_select, afc2_select), index= None, placeholder="Who Wins?")
+
+afc_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["name"].values[0])
+
+# with pick_n:
+
+#     nfc_select = st.selectbox(
+#         "NFC Championship",
+#         (nfc1_select, nfc2_select), index= None, placeholder="Who Wins?")
     
-with pick_n:
 
-    nfc_select = st.selectbox(
-        "NFC Championship",
-        (nfc1_select, nfc2_select), index= None, placeholder="Who Wins?")
-    
-st.divider()
+nfc_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])
+
+# st.divider()
 st.subheader("Pro Bowl Games", divider=True)
 
 img_aa, buffer5,  pb_pick,  buffer6, img_nn = st.columns(5)
