@@ -112,23 +112,24 @@ afc_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.afc3]["seed"].
 nfc_select = str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == Submit_an_Entry.nfc1]["name"].values[0])
 
 # st.divider()
-st.subheader("Pro Bowl Games", divider=True)
+# st.subheader("Pro Bowl Games", divider=True)
 
 img_aa, buffer5,  pb_pick,  buffer6, img_nn = st.columns(5)
 
-with img_aa:
-    st.image(lookups.afc_logo)
+# with img_aa:
+#     st.image(lookups.afc_logo)
 
 
-with pb_pick:
-    pb_select = st.selectbox(
-        "Pro Bowl Winner",
-        ("AFC", "NFC"), index= None, placeholder="Who Wins?")
+# with pb_pick:
+#     pb_select = st.selectbox(
+#         "Pro Bowl Winner",
+#         ("AFC", "NFC"), index= None, placeholder="Who Wins?")
 
-with img_nn:
-    st.image(lookups.nfc_logo)
+# with img_nn:
+#     st.image(lookups.nfc_logo)
 
-st.divider()
+pb_select = "NFC"
+# st.divider()
 st.subheader("Super Bowl LVIII ", divider=True)
 
 img_afc_champ, buffer7,  sb_pick,  buffer8, img_nfc_champ = st.columns(5)
