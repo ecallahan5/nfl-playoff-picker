@@ -7,10 +7,10 @@ import lookups
 import Submit_an_Entry
 
 
-st.title('See you Next Year!')
+# st.title('See you Next Year!')
 
-# st.title('Let\'s Play What If!')
-# st.caption('Choose different outcomes for the remaining playoff games to see who will win!')
+st.title('Let\'s Play What If!')
+st.caption('Choose different outcomes for the remaining playoff games to see who will win!')
 
 # sim_df = ls.standings_df.copy()
 # df_teams = pd.DataFrame(lookups.team_list)
