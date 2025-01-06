@@ -14,7 +14,7 @@ team_list = [
 
 {"slug": 'CIN', "name": "Cincinnati Bengals", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/154/full/ftn3942al0p6xnzh9lv9v11hl.png"},
 {"slug": 'BAL', "name": "Baltimore Ravens", "conf": "AFC", "seed" : "3", "helmet": "https://content.sportslogos.net/logos/7/153/full/317.png"},
-{"slug": 'PIT', "name": "Pittsburgh Steelers", "conf": "AFC", "seed" : "5", "helmet": "https://content.sportslogos.net/logos/7/156/full/972.png"},
+{"slug": 'PIT', "name": "Pittsburgh Steelers", "conf": "AFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/156/full/972.png"},
 {"slug": 'CLE', "name": "Cleveland Browns", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/155/full/8711_cleveland_browns-helmet-2015.png"},
 
 {"slug": 'JAX', "name": "Jacksonville Jaguars", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/159/full/3944_jacksonville_jaguars-helmet-2018.png"},
@@ -24,7 +24,7 @@ team_list = [
 
 {"slug": 'KC', "name": "Kansas City Chiefs", "conf": "AFC", "seed" : "1", "helmet": "https://content.sportslogos.net/logos/7/162/full/mbtef36mxmdxosrpvl4hf3e8i.png"},
 {"slug": 'LV', "name": "Las Vegas Raiders", "conf": "AFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/6708/full/4168_las_vegas_raiders-helmet-2020.png"},
-{"slug": 'LAC', "name": "Los Angeles Chargers", "conf": "AFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/6446/full/4290_los_angeles__chargers-helmet-2020.png"},
+{"slug": 'LAC', "name": "Los Angeles Chargers", "conf": "AFC", "seed" : "5", "helmet": "https://content.sportslogos.net/logos/7/6446/full/4290_los_angeles__chargers-helmet-2020.png"},
 {"slug": 'DEN', "name": "Denver Broncos", "conf": "AFC", "seed" : "7", "helmet": "https://content.sportslogos.net/logos/7/161/full/gvbg3heqpbbmfh36ece0v7b67.png"},
 
 {"slug": 'PHI', "name": "Philadelphia Eagles", "conf": "NFC", "seed" : "2", "helmet": "https://content.sportslogos.net/logos/7/167/full/58p6tm0b3zr4dsrhevp12uva4.png"},
@@ -37,7 +37,7 @@ team_list = [
 {"slug": 'CHI', "name": "Chicago Bears", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/169/full/a8zlwo4e91wi3srhc2f18l5w6.png"},
 {"slug": 'DET', "name": "Detroit Lions", "conf": "NFC", "seed" : "1", "helmet": "https://content.sportslogos.net/logos/7/170/full/5885_detroit_lions-helmet-2017.png"},
 
-{"slug": 'TB', "name": "Tampa Bay Buccaneers", "conf": "NFC", "seed" : "4", "helmet": "https://content.sportslogos.net/logos/7/176/full/5717_tampa_bay_buccaneers-helmet-2020.png"},
+{"slug": 'TB', "name": "Tampa Bay Buccaneers", "conf": "NFC", "seed" : "3", "helmet": "https://content.sportslogos.net/logos/7/176/full/5717_tampa_bay_buccaneers-helmet-2020.png"},
 {"slug": 'NO', "name": "New Orleans Saints", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/175/full/910.pngv"},
 {"slug": 'CAR', "name": "Carolina Panthers", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/174/full/8708_carolina_panthers-helmet-2012.png"},
 {"slug": 'ATL', "name": "Atlanta Falcons", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/173/full/3438_atlanta_falcons-helmet-2020.png"},
@@ -45,6 +45,6 @@ team_list = [
 {"slug": 'SF', "name": "San Francisco 49ers", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/179/full/vj3mzax8z0hvgafjtsccwcqde.png"},
 {"slug": 'SEA', "name": "Seattle Seahawks", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/180/full/3736_seattle_seahawks-helmet-2012.png"},
 {"slug": 'ARI', "name": "Arizona Cardinals", "conf": "NFC", "seed" : "", "helmet": "https://content.sportslogos.net/logos/7/177/full/arizona_cardinals_logo_helmet_20059980.png"},
-{"slug": 'LAR', "name": "Los Angeles Rams", "conf": "NFC", "seed" : "3", "helmet": "https://content.sportslogos.net/logos/7/5941/full/3521_los_angeles_rams-helmet-2020.png"}
+{"slug": 'LAR', "name": "Los Angeles Rams", "conf": "NFC", "seed" : "4", "helmet": "https://content.sportslogos.net/logos/7/5941/full/3521_los_angeles_rams-helmet-2020.png"}
 ]
 

@@ -47,8 +47,8 @@ standings_df["pro_pts"] = np.where(standings_df["PB"].str.strip().isin(pro_winne
 standings_df["sb_pts"] = np.where(standings_df["SB"].str.strip().isin(sb_winner),sb_mult,0)
 standings_df["Total"] = standings_df["wc_pts"] + standings_df["div_pts"] + standings_df["conf_pts"]+standings_df["pro_pts"]+standings_df["sb_pts"]
 
-st.header('Live 2025 Standings')
+st.header('Live 2025 Standings Coming Soon!')
 current_standings = standings_df[["Name", "Total"]].sort_values(by=['Total'], ascending=False).set_index(["Name"])
-st.dataframe(current_standings, use_container_width=True)
+# st.dataframe(current_standings, use_container_width=True)
 
 
