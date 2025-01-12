@@ -11,25 +11,26 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 st.set_page_config(layout="wide")
 
-# df_teams = pd.DataFrame(lookups.team_list)
+df_teams = pd.DataFrame(lookups.team_list)
+
 # # Input Data Model
 
-# nfc1 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "1")]["slug"].values[0]
-# nfc2 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "2")]["slug"].values[0]
-# nfc3 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "3")]["slug"].values[0]
-# nfc4 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "4")]["slug"].values[0]
-# nfc5 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "5")]["slug"].values[0]
-# nfc6 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "6")]["slug"].values[0]
-# nfc7 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "7")]["slug"].values[0]
-# afc1 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "1")]["slug"].values[0]
-# afc2 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "2")]["slug"].values[0]
-# afc3 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "3")]["slug"].values[0]
-# afc4 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "4")]["slug"].values[0]
-# afc5 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "5")]["slug"].values[0]
-# afc6 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "6")]["slug"].values[0]
-# afc7 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "7")]["slug"].values[0]
-# nfcp = "NFC"
-# afcp = "AFC"
+nfc1 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "1")]["slug"].values[0]
+nfc2 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "2")]["slug"].values[0]
+nfc3 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "3")]["slug"].values[0]
+nfc4 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "4")]["slug"].values[0]
+nfc5 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "5")]["slug"].values[0]
+nfc6 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "6")]["slug"].values[0]
+nfc7 = df_teams.loc[(df_teams["conf"] == 'NFC') & (df_teams["seed"] == "7")]["slug"].values[0]
+afc1 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "1")]["slug"].values[0]
+afc2 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "2")]["slug"].values[0]
+afc3 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "3")]["slug"].values[0]
+afc4 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "4")]["slug"].values[0]
+afc5 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "5")]["slug"].values[0]
+afc6 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "6")]["slug"].values[0]
+afc7 = df_teams.loc[(df_teams["conf"] == 'AFC') & (df_teams["seed"] == "7")]["slug"].values[0]
+nfcp = "NFC"
+afcp = "AFC"
 
 
 # Function for the beginning
