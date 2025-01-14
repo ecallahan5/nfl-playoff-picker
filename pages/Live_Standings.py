@@ -46,6 +46,7 @@ standings_df["conf_pts"] = np.where(standings_df["AFC"].str.strip().isin(conf_wi
 standings_df["pro_pts"] = np.where(standings_df["PB"].str.strip().isin(pro_winner),pro_mult,0)
 standings_df["sb_pts"] = np.where(standings_df["SB"].str.strip().isin(sb_winner),sb_mult,0)
 standings_df["Total"] = standings_df["wc_pts"] + standings_df["div_pts"] + standings_df["conf_pts"]+standings_df["pro_pts"]+standings_df["sb_pts"]
+standings_for_sim = standings_df
 
 st.header('Live 2025 Standings')
 current_standings = standings_df[["Name", "Total"]].sort_values(by=['Total'], ascending=False).set_index(["Name"])
