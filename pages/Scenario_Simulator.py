@@ -125,7 +125,7 @@ with pick_a:
         "AFC Championship",
         (afc1_select, afc2_select), index= None, placeholder="Who Wins?")
 
-afc_select = str(df_teams.loc[df_teams["slug"] == afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc3]["name"].values[0])
+# afc_select = str(df_teams.loc[df_teams["slug"] == afc3]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc3]["name"].values[0])
 
 with pick_n:
 
@@ -134,7 +134,7 @@ with pick_n:
         (nfc1_select, nfc2_select), index= None, placeholder="Who Wins?")
     
 
-nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
+# nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
 
 st.divider()
 st.subheader("Pro Bowl Games", divider=True)
@@ -204,5 +204,3 @@ sim_df["Simulated Total"] = sim_df["wc_pts"] + sim_df["div_pts"] + sim_df["conf_
 
 sim_standings = sim_df[["Name", "Total", "Simulated Total"]].sort_values(by=['Simulated Total'], ascending=False).set_index(["Name"])
 st.dataframe(sim_standings, use_container_width=True)
-
-
