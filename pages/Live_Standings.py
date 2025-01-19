@@ -9,7 +9,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 wc_winners = ["4. Houston Texans", "3. Baltimore Ravens", "2. Buffalo Bills", "2. Philadelphia Eagles", "6. Washington Commanders", "4. Los Angeles Rams"]
-div_winners = []
+div_winners = ["1. Kansas City Chiefs", "6. Washington Commanders"]
 conf_winners = []
 pro_winner = []
 sb_winner = []
