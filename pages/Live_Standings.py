@@ -11,7 +11,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 wc_winners = ["4. Houston Texans", "3. Baltimore Ravens", "2. Buffalo Bills", "2. Philadelphia Eagles", "6. Washington Commanders", "4. Los Angeles Rams"]
 div_winners = ["1. Kansas City Chiefs", "6. Washington Commanders", "2. Buffalo Bills", "2. Philadelphia Eagles"]
 conf_winners = ["2. Philadelphia Eagles", "1. Kansas City Chiefs"]
-pro_winner = []
+pro_winner = ["NFC"]
 sb_winner = []
 
 # Load the Google Sheets credentials
