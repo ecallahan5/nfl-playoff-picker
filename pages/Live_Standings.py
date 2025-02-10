@@ -12,7 +12,7 @@ wc_winners = ["4. Houston Texans", "3. Baltimore Ravens", "2. Buffalo Bills", "2
 div_winners = ["1. Kansas City Chiefs", "6. Washington Commanders", "2. Buffalo Bills", "2. Philadelphia Eagles"]
 conf_winners = ["2. Philadelphia Eagles", "1. Kansas City Chiefs"]
 pro_winner = ["NFC"]
-sb_winner = []
+sb_winner = ["2. Philadelphia Eagles"]
 
 # Load the Google Sheets credentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
