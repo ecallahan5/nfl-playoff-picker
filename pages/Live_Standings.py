@@ -8,11 +8,11 @@ from google.oauth2 import service_account
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-wc_winners = ["4. Houston Texans", "3. Baltimore Ravens", "2. Buffalo Bills", "2. Philadelphia Eagles", "6. Washington Commanders", "4. Los Angeles Rams"]
-div_winners = ["1. Kansas City Chiefs", "6. Washington Commanders", "2. Buffalo Bills", "2. Philadelphia Eagles"]
-conf_winners = ["2. Philadelphia Eagles", "1. Kansas City Chiefs"]
-pro_winner = ["NFC"]
-sb_winner = ["2. Philadelphia Eagles"]
+wc_winners = []
+div_winners = []
+conf_winners = []
+pro_winner = []
+sb_winner = []
 
 # Load the Google Sheets credentials
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
@@ -48,7 +48,7 @@ standings_df["sb_pts"] = np.where(standings_df["SB"].str.strip().isin(sb_winner)
 standings_df["Total"] = standings_df["wc_pts"] + standings_df["div_pts"] + standings_df["conf_pts"]+standings_df["pro_pts"]+standings_df["sb_pts"]
 standings_for_sim = standings_df
 
-st.header('Live 2025 Standings')
+st.header('Live 2026 Standings')
 current_standings = standings_df[["Name", "Total"]].sort_values(by=['Total'], ascending=False).set_index(["Name"])
 st.dataframe(current_standings, use_container_width=True)
 
