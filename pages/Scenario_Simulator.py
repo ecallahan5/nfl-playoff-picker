@@ -9,9 +9,9 @@ import lookups
 st.set_page_config(layout="wide")
 
 
-st.title('See you Next Year!')
+# st.title('See you Next Year!')
 
-# # st.title('Scenario Simulator Coming Soon!')
+st.title('Scenario Simulator Coming Soon!')
 # st.title('Let\'s Play What If!')
 # st.caption('Choose different outcomes for the remaining playoff games to see who will win!')
 
