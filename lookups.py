@@ -4,7 +4,7 @@ afc_logo = "https://content.sportslogos.net/logos/7/1010/full/4cgcwgzbffxlpcbuj9
 nfc_logo = "https://content.sportslogos.net/logos/7/1012/full/rkqnfgtgwky3sf8viwrmze8me.gif"
 
 pro_bowl_logo = "https://static.www.nfl.com/image/private/t_q-best/league/rxd0qrygbde1lyvyg4hs"
-super_bowl_logo = 'https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2024/02/647/364/Super-Bowl-LIX.jpg?ve=1&tl=1'
+super_bowl_logo = 'https://pbs.twimg.com/media/Gib0Wz0XEAAow6H?format=jpg&name=large'
 
 team_list = [
 {"slug": 'BUF', "name": "Buffalo Bills", "conf": "AFC", "seed" : "6", "helmet": "https://content.sportslogos.net/logos/7/149/full/buffalo_bills_logo_helmet_2021_sportslogosnet-4815.png"},
