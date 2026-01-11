@@ -8,7 +8,7 @@ from google.oauth2 import service_account
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-wc_winners = []
+wc_winners = ["5. Los Angeles Rams", "2. Chicago Bears"]
 div_winners = []
 conf_winners = []
 pro_winner = []
