@@ -312,7 +312,7 @@ nfc2_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "
 afc_select = str(df_teams.loc[df_teams["slug"] == afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc2]["name"].values[0])
 nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
 
-st.divider()
+
 st.subheader("Pro Bowl Games", divider=True)
 
 img_aa, buffer5,  pb_pick,  buffer6, img_nn = st.columns(5)
