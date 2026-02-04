@@ -302,34 +302,89 @@ buffer1, img_a, buffer2, buffer3, img_n, buffer4 = st.columns(6)
 ###############################################################
 ################# FOR PRO BOWL WEEK ########################
 ###############################################################
+# afc1_select = str(df_teams.loc[df_teams["slug"] == afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc2]["name"].values[0])
+# afc2_select = str(df_teams.loc[df_teams["slug"] == afc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc1]["name"].values[0])
+
+# nfc1_select = str(df_teams.loc[df_teams["slug"] == nfc5]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc5]["name"].values[0])
+# nfc2_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
+
+
+# afc_select = str(df_teams.loc[df_teams["slug"] == afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc2]["name"].values[0])
+# nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
+
+
+# st.subheader("Pro Bowl Games", divider=True)
+
+# img_aa, buffer5,  pb_pick,  buffer6, img_nn = st.columns(5)
+
+# with img_aa:
+#     st.image(lookups.afc_logo)
+
+
+# with pb_pick:
+#     pb_select = st.selectbox(
+#         "Pro Bowl Winner",
+#         ("AFC", "NFC"), index= None, placeholder="Who Wins?")
+
+# with img_nn:
+#     st.image(lookups.nfc_logo)
+
+# # # pb_select = "NFC"
+
+# st.divider()
+# st.subheader("Super Bowl LX ", divider=True)
+
+# img_afc_champ, buffer7,  sb_pick,  buffer8, img_nfc_champ = st.columns(5)
+
+# with img_afc_champ:
+#     st.image(df_teams.loc[df_teams['name'] == afc_select[3:]]["helmet"].values[0])
+
+
+# with sb_pick:
+#     sb_select = st.selectbox(
+#         "Super Bowl Winner",
+#         (afc_select, nfc_select), index= None, placeholder="Who Wins?")
+
+# with img_nfc_champ:
+#     st.image(df_teams.loc[df_teams['name'] == nfc_select[3:]]["helmet"].values[0])
+
+
+# st.divider()
+# st.subheader("Simulated Standings", divider=True)
+# st.caption('If the above scenario comes true, here are the standings:')
+
+# div_winners = [afc1_select, afc2_select, nfc1_select, nfc2_select]
+# conf_winners = [afc_select, nfc_select]
+# pro_winner = [pb_select]
+# sb_winner = [sb_select]
+
+
+# sim_df["div_pts"] = np.where(sim_df["D1"].str.strip().isin(div_winners),div_mult,0) + np.where(sim_df["D2"].str.strip().isin(div_winners),div_mult,0) +\
+#                 np.where(sim_df["D3"].str.strip().isin(div_winners),div_mult,0) + np.where(sim_df["D4"].str.strip().isin(div_winners),div_mult,0)
+# sim_df["conf_pts"] = np.where(sim_df["AFC"].str.strip().isin(conf_winners),conf_mult,0) + np.where(sim_df["NFC"].str.strip().isin(conf_winners),conf_mult,0) 
+# sim_df["pro_pts"] = np.where(sim_df["PB"].str.strip().isin(pro_winner),pro_mult,0)
+# sim_df["sb_pts"] = np.where(sim_df["SB"].str.strip().isin(sb_winner),sb_mult,0)
+# sim_df["Simulated Total"] = sim_df["wc_pts"] + sim_df["div_pts"] + sim_df["conf_pts"]+sim_df["pro_pts"]+sim_df["sb_pts"]
+
+
+# sim_standings = sim_df[["Name", "Total", "Simulated Total"]].sort_values(by=['Simulated Total'], ascending=False).set_index(["Name"])
+# st.dataframe(sim_standings, use_container_width=True)
+
+
+
+###############################################################
+################# FOR SUPER BOWL WEEK ########################
+###############################################################
 afc1_select = str(df_teams.loc[df_teams["slug"] == afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc2]["name"].values[0])
 afc2_select = str(df_teams.loc[df_teams["slug"] == afc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc1]["name"].values[0])
 
 nfc1_select = str(df_teams.loc[df_teams["slug"] == nfc5]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc5]["name"].values[0])
 nfc2_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
 
-
 afc_select = str(df_teams.loc[df_teams["slug"] == afc2]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == afc2]["name"].values[0])
 nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+str(df_teams.loc[df_teams["slug"] == nfc1]["name"].values[0])
 
-
-st.subheader("Pro Bowl Games", divider=True)
-
-img_aa, buffer5,  pb_pick,  buffer6, img_nn = st.columns(5)
-
-with img_aa:
-    st.image(lookups.afc_logo)
-
-
-with pb_pick:
-    pb_select = st.selectbox(
-        "Pro Bowl Winner",
-        ("AFC", "NFC"), index= None, placeholder="Who Wins?")
-
-with img_nn:
-    st.image(lookups.nfc_logo)
-
-# # pb_select = "NFC"
+pb_select = "NFC"
 
 st.divider()
 st.subheader("Super Bowl LX ", divider=True)
@@ -338,7 +393,6 @@ img_afc_champ, buffer7,  sb_pick,  buffer8, img_nfc_champ = st.columns(5)
 
 with img_afc_champ:
     st.image(df_teams.loc[df_teams['name'] == afc_select[3:]]["helmet"].values[0])
-
 
 with sb_pick:
     sb_select = st.selectbox(
