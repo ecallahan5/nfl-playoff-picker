@@ -386,7 +386,6 @@ nfc_select = str(df_teams.loc[df_teams["slug"] == nfc1]["seed"].values[0])+". "+
 
 pb_select = "NFC"
 
-st.divider()
 st.subheader("Super Bowl LX ", divider=True)
 
 img_afc_champ, buffer7,  sb_pick,  buffer8, img_nfc_champ = st.columns(5)
