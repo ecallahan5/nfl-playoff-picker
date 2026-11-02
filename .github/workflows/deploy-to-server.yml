@@ -1,25 +1,31 @@
 name: Deploy to Server
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-picker
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: pushing changes to playoff-ff.app server
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: cd /home/forge/picker.playoff-ff.app && git pull origin main
-      - name: restarting streamlit and clearing cache
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: sudo supervisorctl restart picker && streamlit cache clear
+      # The deploy key is locked to a forced command on the server
+      # (~/bin/deploy-streamlit-app): it can only pull main, sync the venv
+      # from requirements.lock, and restart this app.
+      - name: Deploy picker to playoff-ff.app server
+        env:
+          SSH_KEY: ${{ secrets.KEY }}
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "$HOST ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBwN+TSqMs05H+eimVZQtjbtuClpRKYCCX1Io1QMEWz/" > ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key -p "${PORT:-22}" "$USERNAME@$HOST" "deploy picker"
